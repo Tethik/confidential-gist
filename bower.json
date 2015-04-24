@@ -1,0 +1,27 @@
+{
+  "name": "confidential-gist",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Tethik/confidential-gist",
+  "authors": [
+    "Joakim Uddholm <joakim@uddholm.com>"
+  ],
+  "description": "Create and share confidential gists",
+  "keywords": [
+    "gist",
+    "crypto"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sjcl": "~1.0.2"
+  },
+  "devDependencies": {
+    "angular": "~1.3.15"
+  }
+}
