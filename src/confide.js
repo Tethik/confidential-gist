@@ -31,10 +31,10 @@ confide_gist = {
     });
   },
 
-  delete: function(gist_id, callback) {
-    var url = 'https://api.github.com/gists/'+gist_id;
-    this._req('DELETE', url, callback);
-  },
+  // delete: function(gist_id, callback) {
+  //   var url = 'https://api.github.com/gists/'+gist_id;
+  //   this._req('DELETE', url, callback);
+  // },
 
   put: function(content, key, callback) {
     url = 'https://api.github.com/gists';
@@ -52,27 +52,23 @@ confide_gist = {
   },
 };
 
-var key = "super secret";
-
-confide_gist.put("lololol", key, function(data) {
-  var id = data.id;
-  console.log();
-  console.log("POSTED");
-  console.log(data);
-
-
-  confide_gist.get(id, key, function(data) {
-    console.log();
-    console.log("GOT");
-    console.log(data);
-
-    confide_gist.delete(id, function(data) {
-      console.log();
-      console.log("DELETED");
-      console.log(data);
-    });
-  });
-
-
-
-});
+// var key = "super secret";
+// confide_gist.put("lololol", key, function(data) {
+//   var id = data.id;
+//   console.log();
+//   console.log("POSTED");
+//   console.log(data);
+//
+//
+//   confide_gist.get(id, key, function(data) {
+//     console.log();
+//     console.log("GOT");
+//     console.log(data);
+//
+//     confide_gist.delete(id, function(data) {
+//       console.log();
+//       console.log("DELETED");
+//       console.log(data);
+//     });
+//   });
+// });

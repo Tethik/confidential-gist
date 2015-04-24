@@ -1,13 +1,32 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="demo">
 <head>
 	<meta charset="utf8">
 	<title>Demo</title>
 	<script src="lib/sjcl.js"></script>
 	<script src="lib/angular.min.js"></script>
 	<script src="src/confide.js"></script>
+	<script src="src/demo.js"></script>
+	<link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
+	<link rel="stylesheet" href="src/style.css">
 </head>
-<body>
-
-
+<body ng-controller="MainCtrl">
+<article>
+	<header>
+		<span class="octicon octicon-file-text"></span>
+		<span class="octicon octicon-lock"></span>
+		<span class="octicon octicon-octoface"></span>
+	</header>
+	<main>
+		<textarea ng-model="msg" ng-show="msg" readonly></textarea>
+		<textarea ng-model="content" ng-hide="url"></textarea>
+		<div ng-show="url">
+			<p>Here you go: <input type="text" ng-model="url" readonly></p>
+		</div>
+		{{lel}}
+	</main>
+	<footer>
+		<button type="submit" ng-click="send(content)" ng-hide="url || msg">send</button>
+	</footer>
+</article>
 </body>
